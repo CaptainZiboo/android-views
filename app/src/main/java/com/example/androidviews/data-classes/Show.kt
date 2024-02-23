@@ -6,8 +6,8 @@ data class Show(
     val story: String,
     val episodes: List<Episode>,
     val characters: List<Character>,
-    val date: String,
-    val picture: String,
+    val year: Int,
+    val pictureUrl: String,
     val producer: String,
     val title: String
 ) : Parcelable

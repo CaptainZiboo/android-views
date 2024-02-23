@@ -1,110 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <ImageView android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"/>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Marvel"
-                />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="123 Eopisodes"
-                />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="2013"
-                />
-            </LinearLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="15dp"
-        >
-            <LinearLayout android:layout_width="0dp"
-                          android:layout_height="match_parent"
-                          android:layout_weight="1"
-                          android:orientation="vertical">
-                <TextView android:layout_width="match_parent"
-                          android:layout_height="22dp"
-                          android:textAlignment="center"
-                          android:text="Histoire"
-                          android:layout_marginHorizontal="6dp"
-                          android:layout_marginBottom="5dp"
-                />
-                <View
-                    android:id="@+id/view"
-                    android:layout_width="match_parent"
-                    android:layout_height="4dp"
-                    android:background="@drawable/orange_tab_indicator"/>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
 
-            </LinearLayout>
-            <LinearLayout android:layout_width="0dp"
-                          android:layout_height="match_parent"
-                          android:layout_weight="1"
-                          android:orientation="vertical">
-                <TextView android:layout_width="match_parent"
-                          android:layout_height="22dp"
-                          android:textAlignment="center"
-                          android:text="Personnages"
-                          android:layout_marginHorizontal="6dp"
-                          android:layout_marginBottom="5dp"
-                />
-                <View
-                    android:id="@+id/view"
-                    android:layout_width="match_parent"
-                    android:layout_height="4dp"
-                    android:background="@drawable/orange_tab_indicator"/>
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+               android:id="@+id/back_button_chevron"
+               android:src="@drawable/back_button_chevron"
+               android:tint="@color/black"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               android:layout_marginStart="16dp"
+               android:layout_marginTop="24dp"
+    />
 
-            </LinearLayout>
-            <LinearLayout android:layout_width="0dp"
-                          android:layout_height="match_parent"
-                          android:layout_weight="1"
-                          android:orientation="vertical">
-                <TextView android:layout_width="match_parent"
-                          android:textAlignment="center"
-                          android:layout_height="22dp"
-                          android:text="Episodes"
-                          android:layout_marginHorizontal="6dp"
-                          android:layout_marginBottom="5dp"
-                />
-                <View
-                    android:id="@+id/view"
-                    android:layout_width="match_parent"
-                    android:layout_height="4dp"
-                    android:background="@drawable/orange_tab_indicator"/>
+    <TextView android:id="@+id/back_button_text"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="24dp"
+              android:text="Back Home Placeholder"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent"/>
 
-            </LinearLayout>
-        </LinearLayout>
-        <FrameLayout
-            android:id="@+id/detail_list"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/blue_background_card"/>
-    </LinearLayout>
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

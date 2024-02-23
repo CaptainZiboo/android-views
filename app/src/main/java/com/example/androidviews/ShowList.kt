@@ -28,21 +28,7 @@ class ListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val showList = mutableListOf<Show>()
-
-        for (i in 1..10) {
-            showList.add(
-                Show(
-                    story = "Histoire de la série $i",
-                    episodes = List(10) { Episode("", "Épisode $it", it, "Date de l'épisode $it") },
-                    characters = List(5) { Character("Personnage $it", "") },
-                    date = "Date de la série $i",
-                    picture = "",
-                    producer = "Producteur de la série $i",
-                    title = "Série $i"
-                )
-            )
-        }
+        val showList = seriesListObject
 
         view.findViewById<RecyclerView>(R.id.list).apply {
             layoutManager = LinearLayoutManager(requireContext())
@@ -95,9 +81,9 @@ class ListItem(v: View) : RecyclerView.ViewHolder(v) {
         title.text = show.title
         episodes.text = "${show.episodes.size} épisodes"
         producer.text = show.producer
-        date.text = show.date
+        date.text = show.year.toString()
 
-        Glide.with(itemView).load(show.picture).into(image)
+        Glide.with(itemView).load(show.pictureUrl).into(image)
     }
 }
 
