@@ -1,16 +1,13 @@
 package com.example.androidviews
 
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
-import com.bumptech.glide.request.target.CustomTarget
-import com.bumptech.glide.request.transition.Transition
 
 class ShowDetail: Fragment() {
     override fun onCreateView(
@@ -29,28 +26,64 @@ class ShowDetail: Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val show = ShowDetailArgs.fromBundle(requireArguments()).show
 
+        var backgroundImage :ImageView = view.findViewById<ImageView>(R.id.background_image)
+        var image :ImageView = view.findViewById<ImageView>(R.id.coverPicture)
 
+        var backButtonText = view.findViewById<TextView>(R.id.header)
+        backButtonText.text = show.title
 
-        val url = "https://hdqwalls.com/download/the-avengers-marvel-comics-oc-3840x2400.jpg"
+        var studioNameText = view.findViewById<TextView>(R.id.publisher_name)
+        studioNameText.text = show.producer
 
-        val topSection = view.findViewById<LinearLayout>(R.id.topSection)
+        var episodeCount = view.findViewById<TextView>(R.id.episode_count)
+        episodeCount.text = "${show.episodes.size} épisodes"
 
-        Glide.with(this)
-            .load(url)
-            .into(object : CustomTarget<Drawable>() {
-                override fun onResourceReady(resource: Drawable, transition: Transition<in Drawable>?) {
-                    topSection.background = resource
-                }
-                override fun onLoadCleared(placeholder: Drawable?) {
-                    // Handle cleanup here if necessary
-                }
-            })
+        var date = view.findViewById<TextView>(R.id.date_text)
+        date.text = show.year.toString()
 
-        val coverPicture = view.findViewById<ImageView>(R.id.coverPicture)
+        var storyTabButton = view.findViewById<TextView>(R.id.tab_history)
+        var storyTabIndicator = view.findViewById<View>(R.id.history_tab_indicator)
+        var characterTabButton = view.findViewById<TextView>(R.id.tab_characters)
+        var characterTabIndicator = view.findViewById<View>(R.id.characters_tab_indicator)
+        var episodeTabButton = view.findViewById<TextView>(R.id.tab_episodes)
+        var episodesTabIndicator = view.findViewById<View>(R.id.episodes_tab_indicator)
 
-        Glide.with(this)
-            .load(url)
-            .centerCrop()
-            .into(coverPicture)
+        Glide.with(this).load("https://comicvine.gamespot.com/a/uploads/scale_small/6/67663/6238345-3060875932-35677.jpg").into(backgroundImage)
+        Glide.with(this).load(show.pictureUrl).into(image)
+
+        childFragmentManager.beginTransaction()
+            .replace(R.id.detail_frame_container, StoryTab(show))
+            .commitAllowingStateLoss()
+        characterTabIndicator.visibility = View.INVISIBLE
+        episodesTabIndicator.visibility = View.INVISIBLE
+        storyTabIndicator.visibility = View.VISIBLE
+
+        characterTabButton.setOnClickListener {
+            childFragmentManager.beginTransaction()
+                .replace(R.id.detail_frame_container, CharactersTab(show.characters))
+                .commitAllowingStateLoss()
+            characterTabIndicator.visibility = View.VISIBLE
+            episodesTabIndicator.visibility = View.INVISIBLE
+            storyTabIndicator.visibility = View.INVISIBLE
+        }
+
+        storyTabButton.setOnClickListener {
+            childFragmentManager.beginTransaction()
+                .replace(R.id.detail_frame_container, StoryTab(show))
+                .commitAllowingStateLoss()
+            characterTabIndicator.visibility = View.INVISIBLE
+            episodesTabIndicator.visibility = View.INVISIBLE
+            storyTabIndicator.visibility = View.VISIBLE
+        }
+
+        episodeTabButton.setOnClickListener {
+            childFragmentManager.beginTransaction()
+                .replace(R.id.detail_frame_container, StoryTab(show))
+                .commitAllowingStateLoss()
+            characterTabIndicator.visibility = View.INVISIBLE
+            episodesTabIndicator.visibility = View.VISIBLE
+            storyTabIndicator.visibility = View.INVISIBLE
+        }
+
     }
 }

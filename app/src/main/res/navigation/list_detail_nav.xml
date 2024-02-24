@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation
-    xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/list_detail_nav"
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list_detail_nav"
     app:startDestination="@id/showList">
-    <fragment
-        android:id="@+id/showList"
-        android:name="ShowList"
-        android:label="ShowList">
-        <action
-            android:id="@+id/action_showList_to_showDetail"
-            app:destination="@id/showDetail" />
-    </fragment>
+
     <fragment
         android:id="@+id/showDetail"
         android:name="com.example.androidviews.ShowDetail"
@@ -19,5 +11,13 @@
         <argument
             android:name="show"
             app:argType="Show" />
+    </fragment>
+    <fragment
+        android:id="@+id/showList"
+        android:name="ShowList"
+        android:label="ShowList" >
+        <action
+            android:id="@+id/action_showList_to_showDetail"
+            app:destination="@id/showDetail" />
     </fragment>
 </navigation>

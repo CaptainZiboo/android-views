@@ -1,219 +1,213 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/topSection"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="#000000"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:paddingTop="24dp"
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="960dp"
+        android:layout_height="960dp"
+        android:layout_marginStart="-240dp"
+        android:layout_marginTop="-260dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/back_button_chevron"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="24dp"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginStart="14dp"
+        app:layout_constraintStart_toEndOf="@id/back_button"
+        app:layout_constraintTop_toTopOf="@id/back_button"
+        app:layout_constraintBottom_toBottomOf="@id/back_button"
+        android:text="Header"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        />
+
+    <ImageView
+        android:id="@+id/coverPicture"
+        android:layout_width="95dp"
+        android:layout_height="127dp"
+        android:background="#303030"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/back_button"
+        android:layout_marginTop="13dp"
+        android:scaleType="centerCrop" />
+
+
+    <ImageView
+        android:id="@+id/publisher_icon"
+        android:layout_width="17dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_publisher_bicolor"
+        app:layout_constraintStart_toEndOf="@id/coverPicture"
+        app:layout_constraintTop_toTopOf="@id/coverPicture"
+        android:layout_marginTop="27dp"
+        android:layout_marginStart="18dp"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/publisher_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Marvel"
+        app:layout_constraintStart_toEndOf="@id/publisher_icon"
+        app:layout_constraintTop_toTopOf="@id/publisher_icon"
+        app:layout_constraintBottom_toBottomOf="@id/publisher_icon"
+        android:layout_marginStart="6dp"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:textStyle="normal" />
+
+    <ImageView
+        android:id="@+id/episodes_icon"
+        android:layout_width="17dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_tv_bicolor"
+        app:layout_constraintTop_toBottomOf="@id/publisher_icon"
+        app:layout_constraintStart_toEndOf="@id/coverPicture"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="13dp"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/episode_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="136 épisodes"
+        app:layout_constraintTop_toTopOf="@id/episodes_icon"
+        app:layout_constraintBottom_toBottomOf="@id/episodes_icon"
+        app:layout_constraintStart_toEndOf="@id/episodes_icon"
+        android:layout_marginStart="6dp"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:textStyle="normal" />
+
+    <ImageView
+        android:id="@+id/date_icon"
+        android:layout_width="17dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_calendar_bicolor"
+        app:layout_constraintTop_toBottomOf="@id/episodes_icon"
+        app:layout_constraintStart_toEndOf="@id/coverPicture"
+        android:layout_marginTop="16.5dp"
+        android:layout_marginStart="18dp"
+        android:adjustViewBounds="true"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2013"
+        android:textSize="14sp"
+        app:layout_constraintTop_toTopOf="@id/date_icon"
+        app:layout_constraintBottom_toBottomOf="@id/date_icon"
+        app:layout_constraintStart_toEndOf="@id/date_icon"
+        android:layout_marginStart="6dp"
+        android:textColor="@color/white"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/tab_history"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_weight="1"
+        android:text="Histoire"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/coverPicture"
+        app:layout_constraintEnd_toStartOf="@id/tab_characters"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="13dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/tab_characters"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Personnages"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@id/tab_history"
+        app:layout_constraintEnd_toStartOf="@id/tab_episodes"
+        app:layout_constraintStart_toEndOf="@id/tab_history"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tab_episodes"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_weight="1"
+        android:text="Episodes"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@id/tab_history"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toEndOf="@id/tab_characters"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center" />
 
-        <!-- Title section -->
+    <View
+        android:id="@+id/history_tab_indicator"
+        android:layout_width="108dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/orange_tab_indicator"
+        app:layout_constraintTop_toBottomOf="@id/tab_history"
+        app:layout_constraintStart_toStartOf="@id/tab_history"
+        app:layout_constraintEnd_toEndOf="@id/tab_history"
+        />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+    <View
+        android:id="@+id/characters_tab_indicator"
+        android:layout_width="108dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/tab_characters"
+        app:layout_constraintStart_toStartOf="@id/tab_characters"
+        app:layout_constraintEnd_toEndOf="@id/tab_characters"
+        android:background="@drawable/orange_tab_indicator" />
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/back_button_chevron"
-                app:tint="#FFFFFF" />
+    <View
+        android:id="@+id/episodes_tab_indicator"
+        android:layout_width="108dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/tab_episodes"
+        app:layout_constraintStart_toStartOf="@id/tab_episodes"
+        app:layout_constraintEnd_toEndOf="@id/tab_episodes"
 
-            <TextView
-                android:id="@+id/header"
-                android:layout_width="wrap_content"
-                android:layout_height="26dp"
-                android:layout_marginStart="14dp"
-                android:text="Header"
-                android:textColor="#FFFFFF"
-                android:textSize="17sp"
-                android:textStyle="bold"
-                />
-
-        </LinearLayout>
-
-        <!-- Info section -->
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginTop="11dp">
-
-            <!-- Image -->
-
-            <ImageView
-                android:id="@+id/coverPicture"
-                android:layout_width="95dp"
-                android:layout_height="127dp"
-                android:layout_marginTop="0dp"
-                android:alpha="1"
-                android:background="#303030"
-                android:scaleType="fitXY" />
-
-            <!-- Info lines -->
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="18dp"
-                android:orientation="vertical"
-                android:gravity="center_vertical">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
-
-                    <ImageView
-                        android:layout_width="17dp"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_publisher_bicolor"
-                         android:adjustViewBounds="true"
-                        app:tint="#FFFFFF" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
-                        android:text="Marvel"
-                        android:textSize="14sp"
-                        android:textColor="#FFFFFF"
-                        android:textStyle="normal" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
-
-                    <ImageView
-                        android:layout_width="17dp"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/ic_tv_bicolor"
-                        app:tint="#FFFFFF" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
-                        android:text="136 épisodes"
-                        android:textSize="14sp"
-                        android:textColor="#FFFFFF"
-                        android:textStyle="normal" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
-
-                    <ImageView
-                        android:layout_width="17dp"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_calendar_bicolor"
-                        android:adjustViewBounds="true"
-                        app:tint="#FFFFFF" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
-                        android:text="2013"
-                        android:textSize="14sp"
-                        android:textColor="#FFFFFF"
-                        android:textStyle="normal" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <!-- Tabs section -->
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="3"
-            android:layout_marginTop="24dp">
-
-            <TextView
-                android:id="@+id/tab_history"
-                android:layout_width="0dp"
-                android:layout_height="22dp"
-                android:layout_weight="1"
-                android:text="Histoire"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:gravity="center" />
-
-            <TextView
-                android:id="@+id/tab_characters"
-                android:layout_width="0dp"
-                android:layout_height="22dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Personnages"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tab_episodes"
-                android:layout_width="0dp"
-                android:layout_height="22dp"
-                android:layout_weight="1"
-                android:text="Episodes"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:gravity="center" />
-
-        </LinearLayout>
-
-        <View
-            android:id="@+id/selected_tab_indicator"
-            android:layout_width="108dp"
-            android:layout_height="4dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/orange_tab_indicator"
-            android:layout_gravity="center_horizontal"/>
-
-    </LinearLayout>
+        android:background="@drawable/orange_tab_indicator" />
 
     <FrameLayout
+        android:id="@+id/detail_frame_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@drawable/blue_background_card"
+        app:layout_constraintTop_toBottomOf="@id/characters_tab_indicator"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/topSection"
         app:layout_constraintBottom_toBottomOf="parent">
-
-        <!-- Your content goes here -->
 
     </FrameLayout>
 

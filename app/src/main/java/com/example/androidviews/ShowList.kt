@@ -1,4 +1,3 @@
-import ShowListDirections.ShowListDirections
 import com.example.androidviews.R
 
 import android.os.Bundle
@@ -36,9 +35,8 @@ class ShowList : Fragment() {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = ListAdapter(showList, object : OnItemClickListener {
                 override fun onItemClicked(show: Show) {
-                    // TODO
                      findNavController().navigate(
-                        ShowListDirections.actionShowListToShowDetail(show = show)
+                         ShowListDirections.actionShowListToShowDetail(show)
                      )
                 }
             })

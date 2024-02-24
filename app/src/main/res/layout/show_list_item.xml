@@ -16,6 +16,17 @@
         android:layout_height="match_parent"
         android:padding="16dp">
 
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="128dp"
+            android:layout_height="131dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="21dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="10dp"/>
+
         <TextView
             android:id="@+id/item_ranking"
             android:layout_width="60dp"
@@ -30,15 +41,7 @@
             android:gravity="center"
             android:background="@drawable/position_indicator"/>
 
-        <ImageView
-            android:id="@+id/item_image"
-            android:layout_width="128dp"
-            android:layout_height="131dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="21dp"
-            android:layout_marginBottom="10dp"/>
+
 
         <TextView
             android:id="@+id/item_title"
