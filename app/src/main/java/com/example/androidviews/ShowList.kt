@@ -1,4 +1,5 @@
 import com.example.androidviews.R
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -6,12 +7,12 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-// import androidx.navigation.findNavController
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class ListFragment : Fragment() {
+class ShowList : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,9 +29,9 @@ class ListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val showList = seriesListObject
+        val showList = createSeriesList()
 
-        view.findViewById<RecyclerView>(R.id.list).apply {
+        view.findViewById<RecyclerView>(R.id.shows_list).apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = ListAdapter(showList, object : OnItemClickListener {
                 override fun onItemClicked(shows: Show) {
