@@ -1,3 +1,4 @@
+import ShowListDirections.ShowListDirections
 import com.example.androidviews.R
 
 import android.os.Bundle
@@ -34,11 +35,11 @@ class ShowList : Fragment() {
         view.findViewById<RecyclerView>(R.id.shows_list).apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = ListAdapter(showList, object : OnItemClickListener {
-                override fun onItemClicked(shows: Show) {
+                override fun onItemClicked(show: Show) {
                     // TODO
-                    // findNavController().navigate(
-                    //    ListFragmentDirections.actionListFragmentToDetailFragment()
-                    // )
+                     findNavController().navigate(
+                        ShowListDirections.actionShowListToShowDetail(show = show)
+                     )
                 }
             })
         }
@@ -89,5 +90,5 @@ class ListItem(v: View) : RecyclerView.ViewHolder(v) {
 }
 
 interface OnItemClickListener {
-    fun onItemClicked(shows: Show)
+    fun onItemClicked(show: Show)
 }
