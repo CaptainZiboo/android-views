@@ -46,10 +46,12 @@
 
         <TextView
             android:id="@+id/episode_title"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="@id/episode_number"
             app:layout_constraintTop_toBottomOf="@id/episode_number"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:maxLines="2"
             android:layout_marginTop="5dp"
             android:text="Title"
             android:textStyle="italic"
@@ -63,7 +65,7 @@
             android:layout_width="14dp"
             android:layout_height="15dp"
             android:src="@drawable/ic_calendar_bicolor"
-            app:layout_constraintStart_toStartOf="@id/episode_title"
+            app:layout_constraintStart_toStartOf="@id/episode_number"
             app:layout_constraintTop_toBottomOf="@id/episode_title"
             android:layout_marginTop="18dp"
             app:tint="@color/icon_foreground_color"
