@@ -49,7 +49,7 @@ class ShowDetail: Fragment() {
         var episodeTabButton = view.findViewById<TextView>(R.id.tab_episodes)
         var episodesTabIndicator = view.findViewById<View>(R.id.episodes_tab_indicator)
 
-        Glide.with(this).load("https://comicvine.gamespot.com/a/uploads/scale_small/6/67663/6238345-3060875932-35677.jpg").into(backgroundImage)
+        Glide.with(this).load(show.pictureUrl).into(backgroundImage)
         Glide.with(this).load(show.pictureUrl).into(image)
 
         childFragmentManager.beginTransaction()

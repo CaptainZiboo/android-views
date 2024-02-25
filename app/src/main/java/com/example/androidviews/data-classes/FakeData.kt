@@ -3,7 +3,7 @@ import java.util.Date
 fun createSeriesList(): MutableList<Show> {
     val seriesList = mutableListOf<Show>(
         Show(
-            story = "From Warner Bros. Animation, these teen titans are on the go! Right after they make a sandwich or play some video games. Wait, there's laundry to do? (\"Not it!\") After that, they'll definitely go fight some crime. Maybe. Don't miss the return of Robin, Starfire, Raven, Beast Boy and Cyborg — teen super heroes who are totally unsupervised!"
+            story = "From Warner Bros. Animation, these teen titans are on the go! Right after they make a sandwich or play some video games. Wait, there's laundry to do? (\"Not it!\") After that, they'll definitely go fight some crime. Maybe. Don't miss the return of Robin, Starfire, Raven, Beast Boy and Cyborg — teen super heroes who are totally unsupervised!",
             episodes = mutableListOf<Episode>(
                 Episode("https://comicvine.gamespot.com/a/uploads/scale_small/11141/111417740/8490501-3363742-titlecard.jpg", "Sweet Revenge", 739, Date(2022, 5, 24)),
                 Episode("https://comicvine.gamespot.com/a/uploads/scale_small/11141/111417740/8490501-3363742-titlecard.jpg", "Porch Pirates", 740, Date(2022, 5, 25)),
@@ -61,7 +61,7 @@ fun createSeriesList(): MutableList<Show> {
                 Episode("https://comicvine.gamespot.com/a/uploads/scale_small/6/67663/6608299-9317748161-JCA-ZV-T9Fd7-ZoGSkLmEjtd7diO-f3JmpC8w8smG8sONFO-_ZDLrzlQvD4bo1NvWOAi%3Dw6000", "Strange Little Halloween", 420, Date(2016,10,1)),
                 Episode("https://comicvine.gamespot.com/a/uploads/scale_small/6/67663/6608300-9045748521-EdgJLrNnYHK9kkB2G3f24skWaIjQEUTUAzLI44pxglFzuTAcWWAoW7J8oP7e62HOenvJaQ%3Dw6000", "The Spider Slayers: Part 1", 421, Date(2016,10,8)),
                 Episode("https://comicvine.gamespot.com/a/uploads/scale_small/6/67663/6608301-0942016674-SwUuiib2YmHl2m57d0Acki5e9WHq6uUWbJDBFjG5TIVG7DBvUbO52vRze_D0260ww1w9%3Dw6000", "The Spider Slayers: Part 2", 422, Date(2016,10,15)),
-                Episode("https://comicvine.gamespot.com/a/uploads/scale_small/6/67663/6608302-3674211256-bGMzZrgKfHGdEkDRRAIEHDglNoYSnRgwQaqo6DWgJPSXElENf0XRbnO6bDpTjaruQE6D%3Dw6000", "The Spider Slayers: Part 3", 423, Date(2016,10,22))
+                Episode("https://comicvine.gamespot.com/a/uploads/scale_small/6/67663/6608302-3674211256-bGMzZrgKfHGdEkDRRAIEHDglNoYSnRgwQaqo6DWgJPSXElENf0XRbnO6bDpTjaruQE6D%3Dw6000", "The Spider Slayers: Part 3", 423, Date(2016,10,22)),
                 Episode("https://comicvine.gamespot.com/a/uploads/scale_small/6/67663/6608303-5924560274-Xf8RFejSLxFNYkMS_PRa9KayLxCPbJ9av-C_OZne9pnBexWrCBk4FVgIQqcqVUnuXxhdaw%3Dw6000", "The Moon Knight Before Christmas", 424, Date(2016,10,29)),
                 Episode("https://comicvine.gamespot.com/a/uploads/scale_small/6/67663/6608304-4693518421-3t_R0RWT4CP7OsrciDwWyJvHqwj0LV2_K4ZUwcFjO1OC3Numg9mC7m6cuG5x0fEEW_fu%3Dw6000", "Graduation Day: Part 1", 425, Date(2017,1,7)),
                 Episode("https://comicvine.gamespot.com/a/uploads/scale_small/6/67663/6608305-9767412179-PZjg8MtHw0jVqyDY7jBsDulVa79slq6VogPOroF3hhZqRnMz1NICwE-A10Efhw-cLOQ%3Dw6000", "Graduation Day: Part 2", 426, Date(2017,1,7)), 
@@ -91,22 +91,22 @@ fun createSeriesList(): MutableList<Show> {
         Show(
             story = "The missions of the Strategic Homeland Intervention, Enforcement and Logistics Division. A small team of operatives led by Agent Coulson (Clark Gregg) who must deal with the strange new world of \"superheroes\" after the \"Battle of New York\", protecting the public from new and unknown threats.",
             episodes = mutableListOf<Episode>(
-                Episode("https://comicvine.gamespot.com/a/uploads/original/7/76663/3330523-marvels-agents-of-shield.jpg", "Pilot", 101, Date(2013,09,24)),
-                Episode("https://comicvine.gamespot.com/a/uploads/original/0/40/3346846-coulson.jpg", "0–8–4", 102, Date(2013,10,01)),
-                Episode("https://comicvine.gamespot.com/a/uploads/original/0/40/3363120-asset231-710x400.jpg", "The Asset", 103, Date(2013,10,08)),
+                Episode("https://comicvine.gamespot.com/a/uploads/original/7/76663/3330523-marvels-agents-of-shield.jpg", "Pilot", 101, Date(2013,9,24)),
+                Episode("https://comicvine.gamespot.com/a/uploads/original/0/40/3346846-coulson.jpg", "0–8–4", 102, Date(2013,10,1)),
+                Episode("https://comicvine.gamespot.com/a/uploads/original/0/40/3363120-asset231-710x400.jpg", "The Asset", 103, Date(2013,10,8)),
                 Episode("https://comicvine.gamespot.com/a/uploads/original/6/64675/3369543-133228_8082_pre.jpg", "Eye Spy", 104, Date(2013,10,15)),
                 Episode("https://comicvine.gamespot.com/a/uploads/original/0/40/3396508-133345_3988_pre.jpg", "Girl in the Flower Dress", 105, Date(2013,10,22)),
-                Episode("https://comicvine.gamespot.com/a/uploads/original/6/64675/3427545-706136-133582_7509_pre.jpg", "F.Z.Z.T.", 106, Date(2013,11,05)),
+                Episode("https://comicvine.gamespot.com/a/uploads/original/6/64675/3427545-706136-133582_7509_pre.jpg", "F.Z.Z.T.", 106, Date(2013,11,5)),
                 Episode("https://comicvine.gamespot.com/a/uploads/original/6/64675/3437387-707781-133831_1191_pre.jpg", "The Hub", 107, Date(2013,11,12)),
                 Episode("https://comicvine.gamespot.com/a/uploads/original/11111/111115288/4030466-8708883006-agents.jpeg", "The Well", 108, Date(2013,11,19)),
                 Episode("https://comicvine.gamespot.com/a/uploads/original/11111/111115288/4153934-0369333376-197qi.jpg", "Repairs", 109, Date(2013,11,26)),
-                Episode("https://comicvine.gamespot.com/a/uploads/original/6/64675/3482728-134085_3082_pre-300x199.jpg", "The Bridge", 110, Date(2013,12,03)),
-                Episode("https://comicvine.gamespot.com/a/uploads/original/0/40/3558197-agents-of-shield-s1ep11-still-image-saffron-burrows-as-victoria-hand-010314.jpg", "The Magical Place", 111, Date(2014,01,07)),
-                Episode("https://comicvine.gamespot.com/a/uploads/original/6/64675/3576585-717593-marvelsagentsofshield_y1_d112_f012_023_pre.jpg", "Seeds", 112, Date(2014,01,14)),
-                Episode("https://comicvine.gamespot.com/a/uploads/original/6/64675/3620137-marvelsagentsofshield_y1_d113-f013_002_pre.jpg", "T.R.A.C.K.S.", 113, Date(2014,02,04)),
-                Episode("https://comicvine.gamespot.com/a/uploads/original/11111/111115288/3623033-52f287cc14033.jpg", "T.A.H.I.T.I.", 114, Date(2014,03,04)),
-                Episode("https://comicvine.gamespot.com/a/uploads/original/11111/111115288/3692612-4353507658-822x..jpg", "Yes Men", 115, Date(2014,03,11)),
-                Episode("https://comicvine.gamespot.com/a/uploads/original/11111/111115288/3720121-3706383-screenshot%2Bfrom%2B2014-03-19%2B11-30-38.png", "End of the Beginning", 116, Date(2014,04,01)),
+                Episode("https://comicvine.gamespot.com/a/uploads/original/6/64675/3482728-134085_3082_pre-300x199.jpg", "The Bridge", 110, Date(2013,12,3)),
+                Episode("https://comicvine.gamespot.com/a/uploads/original/0/40/3558197-agents-of-shield-s1ep11-still-image-saffron-burrows-as-victoria-hand-010314.jpg", "The Magical Place", 111, Date(2014,1,7)),
+                Episode("https://comicvine.gamespot.com/a/uploads/original/6/64675/3576585-717593-marvelsagentsofshield_y1_d112_f012_023_pre.jpg", "Seeds", 112, Date(2014,1,14)),
+                Episode("https://comicvine.gamespot.com/a/uploads/original/6/64675/3620137-marvelsagentsofshield_y1_d113-f013_002_pre.jpg", "T.R.A.C.K.S.", 113, Date(2014,2,4)),
+                Episode("https://comicvine.gamespot.com/a/uploads/original/11111/111115288/3623033-52f287cc14033.jpg", "T.A.H.I.T.I.", 114, Date(2014,3,4)),
+                Episode("https://comicvine.gamespot.com/a/uploads/original/11111/111115288/3692612-4353507658-822x..jpg", "Yes Men", 115, Date(2014,3,11)),
+                Episode("https://comicvine.gamespot.com/a/uploads/original/11111/111115288/3720121-3706383-screenshot%2Bfrom%2B2014-03-19%2B11-30-38.png", "End of the Beginning", 116, Date(2014,4,1)),
 
             ),
 
@@ -128,7 +128,7 @@ fun createSeriesList(): MutableList<Show> {
                 Character("A.I.D.A.", "https://comicvine.gamespot.com/a/uploads/original/13/135098/7712903-2453071092-44904.jpg"),
                 Character("Raina", "https://comicvine.gamespot.com/a/uploads/original/7/79073/4746337-raina%20%28earth-616%29%20001.png"),
             ),
-            year = 2013
+            year = 2013,
             pictureUrl = "https://comicvine.gamespot.com/a/uploads/original/6/67663/6238345-3060875932-35677.jpg",
             producer = "Marvel",
             title = "Agents of S.H.I.E.L.D."
@@ -140,5 +140,6 @@ fun createSeriesList(): MutableList<Show> {
     for (i in 0..6) {
         finalList.addAll(seriesList)
     }
-    
+
+    return finalList
 }
