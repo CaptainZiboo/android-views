@@ -29,6 +29,7 @@
             android:scaleType="centerCrop"
             android:background="@drawable/corner_radius_10dp"
             android:clipToOutline="true"
+            android:fontFamily="nunito"
             />
 
         <TextView
@@ -43,7 +44,8 @@
             android:textColor="@color/white"
             android:text="#1"
             android:gravity="center"
-            android:background="@drawable/position_indicator"/>
+            android:background="@drawable/position_indicator"
+            android:fontFamily="nunito"/>
 
         <TextView
             android:id="@+id/item_title"
@@ -57,6 +59,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginStart="11.14dp"
             android:text="Marvel agent of SHIELD"
+            android:fontFamily="nunito"
         />
 
         <ImageView
@@ -81,6 +84,7 @@
             app:layout_constraintBottom_toBottomOf="@id/publisher_icon"
             android:textSize="12sp"
             android:text="Marvel"
+            android:fontFamily="nunito"
         />
 
 
@@ -105,6 +109,7 @@
             app:layout_constraintBottom_toBottomOf="@id/episodes_icon"
             android:textSize="12sp"
             android:text="136 episodes"
+            android:fontFamily="nunito"
         />
 
         <ImageView
@@ -128,6 +133,7 @@
             android:textSize="12dp"
             android:text="Mai 1970"
             android:textColor="@color/white"
+            android:fontFamily="nunito"
         />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

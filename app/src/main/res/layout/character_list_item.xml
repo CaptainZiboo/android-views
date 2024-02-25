@@ -30,6 +30,7 @@
         android:text="Jenna Simmons"
         android:textSize="17sp"
         android:textColor="@color/white"
+        android:fontFamily="nunito"
         />
 
 

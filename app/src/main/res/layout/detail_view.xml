@@ -39,6 +39,7 @@
         android:textColor="@color/white"
         android:textSize="17sp"
         android:textStyle="bold"
+        android:fontFamily="nunito"
         />
 
     <ImageView
@@ -77,7 +78,8 @@
         android:layout_marginStart="6dp"
         android:textSize="14sp"
         android:textColor="@color/white"
-        android:textStyle="normal" />
+        android:textStyle="normal"
+        android:fontFamily="nunito" />
 
     <ImageView
         android:id="@+id/episodes_icon"
@@ -102,7 +104,8 @@
         android:layout_marginStart="6dp"
         android:textSize="14sp"
         android:textColor="@color/white"
-        android:textStyle="normal" />
+        android:textStyle="normal"
+        android:fontFamily="nunito" />
 
     <ImageView
         android:id="@+id/date_icon"
@@ -127,7 +130,8 @@
         app:layout_constraintStart_toEndOf="@id/date_icon"
         android:layout_marginStart="6dp"
         android:textColor="@color/white"
-        android:textStyle="normal" />
+        android:textStyle="normal"
+        android:fontFamily="nunito" />
 
     <TextView
         android:id="@+id/tab_history"
@@ -142,7 +146,8 @@
         android:layout_marginTop="13dp"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:gravity="center" />
+        android:gravity="center"
+        android:fontFamily="nunito" />
 
     <TextView
         android:id="@+id/tab_characters"
@@ -156,7 +161,8 @@
         app:layout_constraintEnd_toStartOf="@id/tab_episodes"
         app:layout_constraintStart_toEndOf="@id/tab_history"
         android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:fontFamily="nunito" />
 
     <TextView
         android:id="@+id/tab_episodes"
@@ -170,7 +176,8 @@
         app:layout_constraintStart_toEndOf="@id/tab_characters"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:gravity="center" />
+        android:gravity="center"
+        android:fontFamily="nunito" />
 
     <View
         android:id="@+id/history_tab_indicator"
