@@ -1,6 +1,3 @@
-import Show
-import Character
-import Episode
 import java.util.Date
 
 fun createSeriesList(): MutableList<Show> {
@@ -8,22 +5,22 @@ fun createSeriesList(): MutableList<Show> {
         Show(
             story = "From Warner Bros. Animation, these teen titans are on the go! Right after they make a sandwich or play some video games. Wait, there's laundry to do? (\"Not it!\") After that, they'll definitely go fight some crime. Maybe. Don't miss the return of Robin, Starfire, Raven, Beast Boy and Cyborg — teen super heroes who are totally unsupervised!"
             episodes = mutableListOf<Episode>(
-                Episode("", "Sweet Revenge", 739, Date(2022, 5, 24)),
-                Episode("", "Porch Pirates", 740, Date(2022, 5, 25)),
-                Episode("", "A Sticky Situation", 741, Date(2022, 5, 26)),
-                Episode("", "The Perfect Pitch?", 742, Date(2022, 5, 27)),
-                Episode("", "Pool Season", 743, Date(2022, 8, 1)),
-                Episode("", "Kyle", 744, Date(2022, 8, 2)),
-                Episode("", "TV Knight 7", 745, Date(2022, 8, 3)),
-                Episode("", "We'll Be Right Back", 746, Date(2022, 8, 4)),
-                Episode("", "Jump City Rock", 747, Date(2022, 9, 12)),
-                Episode("", "Natural Gas", 748,  Date(2022, 9, 13)),
-                Episode("", "50% Chad", 749, Date(2022, 9, 14)),
-                Episode("", "The Score", 750, Date(2022, 9, 15)),
-                Episode("", "365!", 751, Date(2022, 9, 16)),
-                Episode("", "Welcome To Halloween", 752, Date(2022, 10, 7)),
-                Episode("", "The Great Holiday Escape", 753, Date(2022, 9, 12)),
-                Episode("", "The Great Disaster", 754, Date(2023, 2, 6)),
+                Episode("https://comicvine.gamespot.com/a/uploads/scale_small/11141/111417740/8490501-3363742-titlecard.jpg", "Sweet Revenge", 739, Date(2022, 5, 24)),
+                Episode("https://comicvine.gamespot.com/a/uploads/scale_small/11141/111417740/8490501-3363742-titlecard.jpg", "Porch Pirates", 740, Date(2022, 5, 25)),
+                Episode("https://comicvine.gamespot.com/a/uploads/scale_small/11141/111417740/8490501-3363742-titlecard.jpg", "A Sticky Situation", 741, Date(2022, 5, 26)),
+                Episode("https://comicvine.gamespot.com/a/uploads/scale_small/11141/111417740/8490501-3363742-titlecard.jpg", "The Perfect Pitch?", 742, Date(2022, 5, 27)),
+                Episode("https://comicvine.gamespot.com/a/uploads/scale_small/11141/111417740/8490501-3363742-titlecard.jpg", "Pool Season", 743, Date(2022, 8, 1)),
+                Episode("https://comicvine.gamespot.com/a/uploads/scale_small/11141/111417740/8490501-3363742-titlecard.jpg", "Kyle", 744, Date(2022, 8, 2)),
+                Episode("https://comicvine.gamespot.com/a/uploads/scale_small/11141/111417740/8490501-3363742-titlecard.jpg", "TV Knight 7", 745, Date(2022, 8, 3)),
+                Episode("https://comicvine.gamespot.com/a/uploads/scale_small/11141/111417740/8490501-3363742-titlecard.jpg", "We'll Be Right Back", 746, Date(2022, 8, 4)),
+                Episode("https://comicvine.gamespot.com/a/uploads/scale_small/11141/111417740/8490501-3363742-titlecard.jpg", "Jump City Rock", 747, Date(2022, 9, 12)),
+                Episode("https://comicvine.gamespot.com/a/uploads/scale_small/11141/111417740/8490501-3363742-titlecard.jpg", "Natural Gas", 748,  Date(2022, 9, 13)),
+                Episode("https://comicvine.gamespot.com/a/uploads/scale_small/11141/111417740/8490501-3363742-titlecard.jpg", "50% Chad", 749, Date(2022, 9, 14)),
+                Episode("https://comicvine.gamespot.com/a/uploads/scale_small/11141/111417740/8490501-3363742-titlecard.jpg", "The Score", 750, Date(2022, 9, 15)),
+                Episode("https://comicvine.gamespot.com/a/uploads/scale_small/11141/111417740/8490501-3363742-titlecard.jpg", "365!", 751, Date(2022, 9, 16)),
+                Episode("https://comicvine.gamespot.com/a/uploads/scale_small/11141/111417740/8490501-3363742-titlecard.jpg", "Welcome To Halloween", 801, Date(2022, 10, 7)),
+                Episode("https://comicvine.gamespot.com/a/uploads/scale_small/13/135098/9111657-4111472389-The_Gr.jpeg", "The Great Holiday Escape", 802, Date(2022, 9, 12)),
+                Episode("https://comicvine.gamespot.com/a/uploads/scale_small/13/135098/9111667-7355550633-Lookin.jpeg", "The Great Disaster", 803, Date(2023, 2, 6)),
             ),
             characters = mutableListOf<Character>(
                 Character("Beast Boy", "https://comicvine.gamespot.com/a/uploads/square_small/11161/111612243/8912349-1325762190-FuFtnhWWYAUk1ub.jpg"),

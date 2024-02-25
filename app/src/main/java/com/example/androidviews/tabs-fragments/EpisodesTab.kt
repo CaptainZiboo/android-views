@@ -1,5 +1,6 @@
 package com.example.androidviews
 
+import Episode
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,10 +11,9 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import Episode
-import java.util.Locale
 import java.text.SimpleDateFormat
 import java.util.Date
+import java.util.Locale
 
 
 class EpisodesTab(val episodes: List<Episode>) : Fragment() {
