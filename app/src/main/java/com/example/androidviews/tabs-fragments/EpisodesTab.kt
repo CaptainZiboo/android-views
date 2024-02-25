@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import Episode
-import com.google.android.material.imageview.ShapeableImageView
 import java.util.Locale
 import java.text.SimpleDateFormat
 import java.util.Date

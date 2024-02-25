@@ -14,7 +14,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp">
+        >
 
         <ImageView
             android:id="@+id/item_image"
@@ -24,10 +24,12 @@
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginStart="14dp"
             android:layout_marginTop="21dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             android:scaleType="centerCrop"
             android:background="@drawable/corner_radius_10dp"
             android:clipToOutline="true"
-            android:layout_marginBottom="10dp"/>
+            />
 
         <TextView
             android:id="@+id/item_ranking"
@@ -36,6 +38,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:textSize="22sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="7dp"
             android:textColor="@color/white"
             android:text="#1"
             android:gravity="center"
@@ -85,8 +89,7 @@
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:src="@drawable/ic_tv_bicolor"
-            app:layout_constraintStart_toEndOf="@id/item_image"
-            android:layout_marginStart="12.14dp"
+            app:layout_constraintStart_toStartOf="@id/publisher_icon"
             app:layout_constraintTop_toBottomOf="@id/publisher_icon"
             android:layout_marginTop="9dp"
             app:tint="@color/icon_foreground_color"
@@ -96,8 +99,7 @@
             android:id="@+id/item_episodes"
             android:layout_width="wrap_content"
             android:layout_height="16dp"
-            app:layout_constraintStart_toEndOf="@id/episodes_icon"
-            android:layout_marginStart="6dp"
+            app:layout_constraintStart_toStartOf="@id/item_producer"
             android:textColor="@color/white"
             app:layout_constraintTop_toTopOf="@id/episodes_icon"
             app:layout_constraintBottom_toBottomOf="@id/episodes_icon"
@@ -105,15 +107,12 @@
             android:text="136 episodes"
         />
 
-
-
         <ImageView
             android:id="@+id/calendar_icon"
             android:layout_width="14dp"
             android:layout_height="15dp"
             android:src="@drawable/ic_calendar_bicolor"
-            app:layout_constraintStart_toEndOf="@id/item_image"
-            android:layout_marginStart="12.14dp"
+            app:layout_constraintStart_toStartOf="@id/publisher_icon"
             app:layout_constraintTop_toBottomOf="@id/episodes_icon"
             android:layout_marginTop="11.75dp"
             app:tint="@color/icon_foreground_color"
@@ -123,13 +122,12 @@
             android:id="@+id/item_date"
             android:layout_width="wrap_content"
             android:layout_height="16dp"
-            app:layout_constraintStart_toEndOf="@id/calendar_icon"
-            android:layout_marginStart="6dp"
-            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@id/item_producer"
             app:layout_constraintTop_toTopOf="@id/calendar_icon"
             app:layout_constraintBottom_toBottomOf="@id/calendar_icon"
             android:textSize="12dp"
             android:text="Mai 1970"
+            android:textColor="@color/white"
         />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

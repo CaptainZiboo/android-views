@@ -12,6 +12,8 @@
         android:layout_marginTop="-260dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:foreground="@drawable/gradient_shape"
+        android:foregroundTint="@color/screen_background_color"
         />
 
     <ImageView
