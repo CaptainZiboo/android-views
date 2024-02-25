@@ -88,7 +88,7 @@ class ShowDetail: Fragment() {
 
         episodeTabButton.setOnClickListener {
             childFragmentManager.beginTransaction()
-                .replace(R.id.detail_frame_container, StoryTab(show))
+                .replace(R.id.detail_frame_container, EpisodesTab(show.episodes))
                 .commitAllowingStateLoss()
             characterTabIndicator.visibility = View.INVISIBLE
             episodesTabIndicator.visibility = View.VISIBLE
