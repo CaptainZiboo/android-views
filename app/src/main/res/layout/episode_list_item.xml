@@ -41,6 +41,7 @@
             android:layout_marginStart="19dp"
             android:layout_marginTop="8dp"
             android:text="Episode #101"
+            android:fontFamily="@font/nunito_regular"
             />
 
         <TextView
@@ -54,6 +55,7 @@
             android:textStyle="italic"
             android:textSize="15sp"
             android:textColor="@color/white"
+            android:fontFamily="@font/nunito_regular"
             />
 
         <ImageView
@@ -78,6 +80,7 @@
             android:text="24 Septembre 2014"
             android:textSize="11sp"
             android:textColor="@color/white"
+            android:fontFamily="@font/nunito_regular"
             />
 
 

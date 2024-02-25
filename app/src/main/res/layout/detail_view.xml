@@ -38,8 +38,7 @@
         android:text="Header"
         android:textColor="@color/white"
         android:textSize="17sp"
-        android:textStyle="bold"
-        android:fontFamily="nunito"
+        android:fontFamily="@font/nunito_bold"
         />
 
     <ImageView
@@ -79,7 +78,7 @@
         android:textSize="14sp"
         android:textColor="@color/white"
         android:textStyle="normal"
-        android:fontFamily="nunito" />
+        android:fontFamily="@font/nunito_regular" />
 
     <ImageView
         android:id="@+id/episodes_icon"
@@ -105,7 +104,7 @@
         android:textSize="14sp"
         android:textColor="@color/white"
         android:textStyle="normal"
-        android:fontFamily="nunito" />
+        android:fontFamily="@font/nunito_regular" />
 
     <ImageView
         android:id="@+id/date_icon"
@@ -131,7 +130,7 @@
         android:layout_marginStart="6dp"
         android:textColor="@color/white"
         android:textStyle="normal"
-        android:fontFamily="nunito" />
+        android:fontFamily="@font/nunito_regular" />
 
     <TextView
         android:id="@+id/tab_history"
@@ -145,9 +144,8 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="13dp"
         android:textSize="16sp"
-        android:textStyle="bold"
         android:gravity="center"
-        android:fontFamily="nunito" />
+        android:fontFamily="@font/nunito_semibold" />
 
     <TextView
         android:id="@+id/tab_characters"
@@ -161,8 +159,7 @@
         app:layout_constraintEnd_toStartOf="@id/tab_episodes"
         app:layout_constraintStart_toEndOf="@id/tab_history"
         android:textSize="16sp"
-        android:textStyle="bold"
-        android:fontFamily="nunito" />
+        android:fontFamily="@font/nunito_semibold" />
 
     <TextView
         android:id="@+id/tab_episodes"
@@ -175,9 +172,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/tab_characters"
         android:textSize="16sp"
-        android:textStyle="bold"
         android:gravity="center"
-        android:fontFamily="nunito" />
+        android:fontFamily="@font/nunito_semibold" />
 
     <View
         android:id="@+id/history_tab_indicator"
