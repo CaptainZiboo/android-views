@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 
 class ShowDetail: Fragment() {
@@ -57,6 +58,9 @@ class ShowDetail: Fragment() {
         characterTabIndicator.visibility = View.INVISIBLE
         episodesTabIndicator.visibility = View.INVISIBLE
         storyTabIndicator.visibility = View.VISIBLE
+        characterTabButton.alpha = 0.6F
+        storyTabButton.alpha = 1.0F
+        episodeTabButton.alpha = 0.6F
 
         characterTabButton.setOnClickListener {
             childFragmentManager.beginTransaction()
@@ -65,6 +69,9 @@ class ShowDetail: Fragment() {
             characterTabIndicator.visibility = View.VISIBLE
             episodesTabIndicator.visibility = View.INVISIBLE
             storyTabIndicator.visibility = View.INVISIBLE
+            characterTabButton.alpha = 1.0F
+            storyTabButton.alpha = 0.6F
+            episodeTabButton.alpha = 0.6F
         }
 
         storyTabButton.setOnClickListener {
@@ -74,6 +81,9 @@ class ShowDetail: Fragment() {
             characterTabIndicator.visibility = View.INVISIBLE
             episodesTabIndicator.visibility = View.INVISIBLE
             storyTabIndicator.visibility = View.VISIBLE
+            characterTabButton.alpha = 0.6F
+            storyTabButton.alpha = 1.0F
+            episodeTabButton.alpha = 0.6F
         }
 
         episodeTabButton.setOnClickListener {
@@ -83,7 +93,17 @@ class ShowDetail: Fragment() {
             characterTabIndicator.visibility = View.INVISIBLE
             episodesTabIndicator.visibility = View.VISIBLE
             storyTabIndicator.visibility = View.INVISIBLE
+            characterTabButton.alpha = 0.6F
+            storyTabButton.alpha = 0.6F
+            episodeTabButton.alpha = 1.0F
         }
+
+        var backButton = view.findViewById<View>(R.id.back_button)
+
+        backButton.setOnClickListener {
+            findNavController().navigateUp()
+        }
+
 
     }
 }
